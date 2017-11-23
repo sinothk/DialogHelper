@@ -55,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
                         });
                     }
                 }, 3000);
-
-                promptDialog.dismiss();
             }
         });
         findViewById(R.id.main_success).setOnClickListener(new View.OnClickListener() {
