@@ -7,12 +7,12 @@ import android.app.Activity;
  * 描述：来自https://github.com/limxing/Android-PromptDialog
  */
 
-public final class DialogHelper extends PromptDialog {
-    public DialogHelper(Activity context) {
+public final class DialogManager extends PromptDialog {
+    public DialogManager(Activity context) {
         super(context);
     }
 
-    public DialogHelper(Builder builder, Activity context) {
+    public DialogManager(Builder builder, Activity context) {
         super(builder, context);
     }
 }

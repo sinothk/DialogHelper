@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DialogHelper/DialogHelper.iml" filepath="$PROJECT_DIR$/DialogHelper/DialogHelper.iml" />
       <module fileurl="file://$PROJECT_DIR$/DialogLib.iml" filepath="$PROJECT_DIR$/DialogLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DialogManager/DialogManager.iml" filepath="$PROJECT_DIR$/DialogManager/DialogManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

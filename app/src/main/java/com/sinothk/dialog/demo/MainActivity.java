@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.sinothk.dialog.DialogButton;
 import com.sinothk.dialog.DialogButtonListener;
-import com.sinothk.dialog.DialogHelper;
+import com.sinothk.dialog.DialogManager;
 import com.sinothk.dialog.OnAdClickListener;
 
 /**
@@ -18,7 +18,7 @@ import com.sinothk.dialog.OnAdClickListener;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private DialogHelper promptDialog;
+    private DialogManager promptDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //创建对象
-        promptDialog = new DialogHelper(this);
+        promptDialog = new DialogManager(this);
         //设置自定义属性
         promptDialog.getDefaultBuilder().touchAble(true).round(3).loadingDuration(3000);
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                     }
-                }, 3000);
+                }, 2000);
             }
         });
         findViewById(R.id.main_success).setOnClickListener(new View.OnClickListener() {

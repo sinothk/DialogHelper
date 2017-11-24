@@ -1,1 +1,1 @@
-include ':app', ':DialogHelper'
+include ':app', ':DialogManager'
