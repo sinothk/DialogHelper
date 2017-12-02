@@ -663,7 +663,7 @@ class PromptView extends ImageView {
         return builder;
     }
 
-    public void showSomthing(int currentType) {
+    public void showSomething(int currentType) {
         this.currentType = currentType;
         if (currentType == PROMPT_ALERT_WARN) {
             isSheet = buttons.length > 2;
@@ -709,9 +709,9 @@ class PromptView extends ImageView {
     }
 
 
-    void showSomthingAlert(DialogButton... button) {
+    void showSomethingAlert(DialogButton... button) {
         this.buttons = button;
-        showSomthing(PROMPT_ALERT_WARN);
+        showSomething(PROMPT_ALERT_WARN);
 
     }
 

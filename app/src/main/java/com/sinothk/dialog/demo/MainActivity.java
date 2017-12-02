@@ -105,15 +105,26 @@ public class MainActivity extends AppCompatActivity {
                 //可创建android效果的底部Sheet选择，默认IOS效果，sheetCellPad=0为Android效果的Sheet
 //                promptDialog.getAlertDefaultBuilder().sheetCellPad(0).round(0);
                 //设置按钮的特点，颜色大小什么的，具体看PromptButton的成员变量
-                DialogButton cancle = new DialogButton("取消", null);
-                cancle.setTextColor(Color.parseColor("#0076ff"));
+                DialogButton cancel = new DialogButton("取消", null);
+                cancel.setTextColor(Color.parseColor("#FF0000"));
                 //设置显示的文字大小及颜色
-//                promptDialog.getAlertDefaultBuilder().textSize(12).textColor(Color.GRAY);
+//                promptDialog.getAlertDefaultBuilder().textSize(12).textColor(Color.RED);
                 //默认两个按钮为Alert对话框，大于三个按钮的为底部SHeet形式展现
-                promptDialog.showAlertSheet("", true, cancle,
-                        new DialogButton("选项1", null), new DialogButton("选项2", null),
-                        new DialogButton("选项3", null), new DialogButton("选项4", null));
-
+                promptDialog.showAlertSheet("选择性别", true, cancel,
+                        new DialogButton("男", new DialogButtonListener() {
+                            @Override
+                            public void onClick(DialogButton button) {
+                                Toast.makeText(MainActivity.this, "男", Toast.LENGTH_SHORT).show();
+                            }
+                        }),
+//                        new DialogButton("女", new DialogButtonListener() {
+//                            @Override
+//                            public void onClick(DialogButton button) {
+//                                Toast.makeText(MainActivity.this, "女", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }),
+//                        new DialogButton("选项3", Color.GREEN, null),
+                        new DialogButton("女", Color.GREEN, null));
             }
         });
         findViewById(R.id.main_customer).setOnClickListener(new View.OnClickListener() {

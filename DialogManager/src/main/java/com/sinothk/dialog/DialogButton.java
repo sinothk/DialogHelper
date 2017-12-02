@@ -13,4 +13,8 @@ public class DialogButton extends PromptButton {
     public DialogButton(String text, DialogButtonListener listener, boolean delayClick) {
         super(text, listener, delayClick);
     }
+
+    public DialogButton(String text, int textColor, DialogButtonListener listener) {
+        super(text, textColor, listener);
+    }
 }

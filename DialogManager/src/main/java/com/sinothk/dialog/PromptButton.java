@@ -30,6 +30,12 @@ class PromptButton {
         this.isDelyClick=delayClick;
     }
 
+    public PromptButton(String text, int textColor, DialogButtonListener listener) {
+        this.text = text;
+        this.textColor = textColor;
+        this.listener = listener;
+    }
+
     public boolean isFocus() {
         return focus;
     }

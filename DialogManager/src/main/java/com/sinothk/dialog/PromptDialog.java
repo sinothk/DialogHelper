@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Handler;
 import android.util.Log;
 import android.view.ViewGroup;
@@ -248,7 +249,7 @@ public class PromptDialog {
         checkLoadView(withAnim);
         if (isShowing) {
             promptView.setBuilder(builder);
-            promptView.showSomthing(promptError);
+            promptView.showSomething(promptError);
             dissmissAni(false);
         }
     }
@@ -293,14 +294,13 @@ public class PromptDialog {
         }
         Builder builder = Builder.getAlertDefaultBuilder();
         builder.text(text);
+//        builder.textColor(Color.parseColor("#2B2B2B"));
         builder.icon(R.drawable.ic_prompt_alert_warn);
         closeInput();
         promptView.setBuilder(builder);
         checkLoadView(withAnim);
-        promptView.showSomthingAlert(button);
+        promptView.showSomethingAlert(button);
         dissmissAni(true);
-
-
     }
 
     public ImageView showAd(boolean withAnim, OnAdClickListener listener) {
