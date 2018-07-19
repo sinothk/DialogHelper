@@ -329,6 +329,8 @@ public class PromptDialog {
     public void showLoading(String msg, boolean withAnim) {
         inAnim = inDefaultAnim;
         outAnim = outDefaultAnim;
+
+
         if (promptView.getCurrentType() != PromptView.PROMPT_LOADING) {
             Builder builder = Builder.getDefaultBuilder();
             builder.icon(R.drawable.ic_prompt_loading);
@@ -350,6 +352,39 @@ public class PromptDialog {
      */
     public void showLoading(String msg) {
         showLoading(msg, true);
+    }
+
+    /**
+     * 展示loading
+     *
+     * @param msg      信息
+     * @param withAnim 是否动画进入
+     */
+    public void loading(String msg, boolean withAnim) {
+        inAnim = inDefaultAnim;
+        outAnim = outDefaultAnim;
+
+        if (promptView.getCurrentType() != PromptView.PROMPT_LOADING) {
+            Builder builder = Builder.getDefaultBuilder();
+            builder.icon(R.drawable.ic_prompt_loading);
+            builder.text(msg);
+            promptView.setBuilder(builder);
+            closeInput();
+            checkLoadView(withAnim);
+            promptView.showLoading();
+            dissmissAni(true);
+        } else {
+            promptView.setText(msg);
+        }
+    }
+
+    /**
+     * 展示加载中
+     *
+     * @param msg
+     */
+    public void loading(String msg) {
+        loading(msg, false);
     }
 
     /** 延迟展示loading
@@ -385,7 +420,7 @@ public class PromptDialog {
     /**
      * dismiss dialog and start animation
      */
-    private void dissmissAni(boolean isCancle) {
+    private void dissmissAni(boolean isCancel) {
         if (dissmissAnim == null) {
             dissmissAnim = ValueAnimator.ofInt(0, 1);
             dissmissAnim.setDuration(promptView.getBuilder().stayDuration);
@@ -417,7 +452,7 @@ public class PromptDialog {
             dissmissAnim.end();
 
         }
-        if (!isCancle) {
+        if (!isCancel) {
             dissmissAnim.start();
             dissmissAnimCancle = false;
         }

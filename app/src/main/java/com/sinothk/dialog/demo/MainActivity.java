@@ -12,6 +12,7 @@ import com.sinothk.dialog.DialogButton;
 import com.sinothk.dialog.DialogButtonListener;
 import com.sinothk.dialog.DialogManager;
 import com.sinothk.dialog.OnAdClickListener;
+import com.sinothk.dialog.loading.LoadingDialog;
 
 /**
  * github:limxing
@@ -42,7 +43,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                main_failview.setMode(FailView.MODE_REFRESH);
-                promptDialog.showLoading("正在登录");
+//                promptDialog.loading("正在登录");
+//                promptDialog.dismiss();
+
+                LoadingDialog.show(MainActivity.this,"正在登录");//有文字提示
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -50,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                promptDialog.dismiss();
+                                LoadingDialog.hidden(); //隐藏对话框
                             }
                         });
                     }
@@ -80,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         confirm.setTextColor(Color.parseColor("#DAA520"));
         confirm.setFocusBacColor(Color.parseColor("#FAFAD2"));
         confirm.setDelyClick(true);//点击后，是否再对话框消失后响应按钮的监听事件
+
         findViewById(R.id.main_warn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,6 +115,20 @@ public class MainActivity extends AppCompatActivity {
                 //设置显示的文字大小及颜色
 //                promptDialog.getAlertDefaultBuilder().textSize(12).textColor(Color.RED);
                 //默认两个按钮为Alert对话框，大于三个按钮的为底部SHeet形式展现
+
+
+                DialogButton[] btns = {new DialogButton("男", new DialogButtonListener() {
+                    @Override
+                    public void onClick(DialogButton button) {
+                        Toast.makeText(MainActivity.this, "男", Toast.LENGTH_SHORT).show();
+                    }
+                }), new DialogButton("男", new DialogButtonListener() {
+                    @Override
+                    public void onClick(DialogButton button) {
+                        Toast.makeText(MainActivity.this, "男", Toast.LENGTH_SHORT).show();
+                    }
+                })};
+
                 promptDialog.showAlertSheet("选择性别", true, cancel,
                         new DialogButton("男", new DialogButtonListener() {
                             @Override
