@@ -1,4 +1,4 @@
-package com.sinothk.dialog.demo;
+package com.sinothk.dialog.demo.tipDialog;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,16 +8,17 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.sinothk.dialog.DialogButton;
-import com.sinothk.dialog.DialogButtonListener;
-import com.sinothk.dialog.DialogManager;
-import com.sinothk.dialog.OnAdClickListener;
+import com.sinothk.dialog.demo.R;
+import com.sinothk.dialog.tipDialog.DialogButton;
+import com.sinothk.dialog.tipDialog.DialogButtonListener;
+import com.sinothk.dialog.tipDialog.DialogManager;
+import com.sinothk.dialog.tipDialog.OnAdClickListener;
 import com.sinothk.dialog.loading.LoadingDialog;
 
 /**
  * github:limxing
  */
-public class MainActivity extends AppCompatActivity {
+public class TopRightMainActivity extends AppCompatActivity {
 
     private DialogManager promptDialog;
 
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 //                promptDialog.loading("正在登录");
 //                promptDialog.dismiss();
 
-                LoadingDialog.show(MainActivity.this,"正在登录");//有文字提示
+                LoadingDialog.show(TopRightMainActivity.this,"正在登录");//有文字提示
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         final DialogButton confirm = new DialogButton("确定", new DialogButtonListener() {
             @Override
             public void onClick(DialogButton button) {
-                Toast.makeText(MainActivity.this, button.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(TopRightMainActivity.this, button.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         confirm.setTextColor(Color.parseColor("#DAA520"));
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 promptDialog.showWarnAlert("你确定要退出登录？", new DialogButton("取消", new DialogButtonListener() {
                     @Override
                     public void onClick(DialogButton button) {
-                        Toast.makeText(MainActivity.this, button.getText(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TopRightMainActivity.this, button.getText(), Toast.LENGTH_SHORT).show();
                     }
                 }), confirm);
             }
@@ -120,12 +121,12 @@ public class MainActivity extends AppCompatActivity {
                 DialogButton[] btns = {new DialogButton("男", new DialogButtonListener() {
                     @Override
                     public void onClick(DialogButton button) {
-                        Toast.makeText(MainActivity.this, "男", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TopRightMainActivity.this, "男", Toast.LENGTH_SHORT).show();
                     }
                 }), new DialogButton("男", new DialogButtonListener() {
                     @Override
                     public void onClick(DialogButton button) {
-                        Toast.makeText(MainActivity.this, "男", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TopRightMainActivity.this, "男", Toast.LENGTH_SHORT).show();
                     }
                 })};
 
@@ -133,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                         new DialogButton("男", new DialogButtonListener() {
                             @Override
                             public void onClick(DialogButton button) {
-                                Toast.makeText(MainActivity.this, "男", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TopRightMainActivity.this, "男", Toast.LENGTH_SHORT).show();
                             }
                         }),
 //                        new DialogButton("女", new DialogButtonListener() {
@@ -158,14 +159,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 promptDialog.getDefaultBuilder().backAlpha(150);
-                Glide.with(MainActivity.this).load("https://timgsa.baidu.com/timg?image&quality=80&" +
+                Glide.with(TopRightMainActivity.this).load("https://timgsa.baidu.com/timg?image&quality=80&" +
                         "size=b9999_10000&sec=1495518782659&di=25b120262114749ae8543652d2de5715&" +
                         "imgtype=0&src=http%3A%2F%2Fimg.tupianzj.com%2Fuploads%2Fallimg%2F160316%2F9-160316152R5.jpg")
 //                        .placeholder(getResources().getDrawable(R.drawable.ic_prompt_holder))
                         .into(promptDialog.showAd(true, new OnAdClickListener() {
                             @Override
                             public void onAdClick() {
-                                Toast.makeText(MainActivity.this, "点击了广告", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TopRightMainActivity.this, "点击了广告", Toast.LENGTH_SHORT).show();
                             }
                         }));
             }

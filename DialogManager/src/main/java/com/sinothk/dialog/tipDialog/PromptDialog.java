@@ -1,10 +1,9 @@
-package com.sinothk.dialog;
+package com.sinothk.dialog.tipDialog;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Handler;
 import android.util.Log;
 import android.view.ViewGroup;
@@ -16,6 +15,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
+
+import com.sinothk.dialog.R;
 
 
 /**

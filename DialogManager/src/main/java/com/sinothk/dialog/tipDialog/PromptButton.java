@@ -1,4 +1,4 @@
-package com.sinothk.dialog;
+package com.sinothk.dialog.tipDialog;
 
 import android.graphics.Color;
 import android.graphics.RectF;

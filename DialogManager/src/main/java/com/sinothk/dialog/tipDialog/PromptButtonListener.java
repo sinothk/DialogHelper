@@ -1,4 +1,4 @@
-package com.sinothk.dialog;
+package com.sinothk.dialog.tipDialog;
 
 /**
  * Created by FengTing on 2017/5/8.

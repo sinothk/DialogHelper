@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
-import com.sinothk.dialog.DialogManager;
 import com.sinothk.dialog.demo.R;
 import com.sinothk.dialog.topRightMenu.PopMenuItem;
+import com.sinothk.dialog.topRightMenu.TopRightMenu;
 
 import java.util.ArrayList;
 
@@ -23,13 +23,14 @@ public class TRMMainActivity extends AppCompatActivity {
         menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "考勤统计"));
         menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "考统计"));
         menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "考勤"));
-//        menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "PopMenu4"));
-//        menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "PopMenu5"));
+        menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "PopMenu4"));
+        menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "PopMenu5"));
 
         findViewById(R.id.more).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogManager.PopMenuView
+
+                TopRightMenu
                         .createPopMenu(TRMMainActivity.this)//, 420
                         .addMenuItemData(menuItems, new AdapterView.OnItemClickListener() {
                             @Override
