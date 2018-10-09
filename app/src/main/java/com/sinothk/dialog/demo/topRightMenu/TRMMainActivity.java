@@ -17,7 +17,7 @@ public class TRMMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.trm_activity_main);
+        setContentView(R.layout.loading_dialog_demo_activity_main);
 
         final ArrayList<PopMenuItem> menuItems = new ArrayList<>();
         menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "考勤统计"));
@@ -42,4 +42,5 @@ public class TRMMainActivity extends AppCompatActivity {
             }
         });
     }
+
 }

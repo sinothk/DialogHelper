@@ -18,33 +18,36 @@ import com.sinothk.dialog.R;
  */
 
 
-public class LoadDialog extends Dialog{
+class LoadDialog extends Dialog {
 
 
-    private static   TextView mTextView;
+    private TextView mTextView;
 
-    public LoadDialog(@NonNull Context context) {
+    LoadDialog(@NonNull Context context) {
         super(context, R.style.LoadDialogStyle);
         setContentView(R.layout.loading_dialog);
-        mTextView = (TextView)findViewById(R.id.id_text);
-
-
+        mTextView = (TextView) findViewById(R.id.id_text);
+        mTextView.setVisibility(View.GONE);
     }
 
     /**
      * 设置为空，方式内存泄漏
      */
-    public static void setTextViewNull(){
-        mTextView=null;
+    public void setTextViewNull() {
+        mTextView = null;
     }
 
-
-
-    public static void SetText(String msg) {
+    /**
+     * 设置文字
+     *
+     * @param msg
+     */
+    public void setText(String msg) {
         mTextView.setVisibility(View.VISIBLE);
         mTextView.setText(msg);
     }
-    public static void ShowText() {
+
+    public void ShowText() {
         mTextView.setVisibility(View.VISIBLE);
     }
 

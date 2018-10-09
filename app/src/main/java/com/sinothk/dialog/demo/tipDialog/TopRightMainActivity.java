@@ -55,7 +55,7 @@ public class TopRightMainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                LoadingDialog.hidden(); //隐藏对话框
+                                LoadingDialog.dismiss(); //隐藏对话框
                             }
                         });
                     }
