@@ -31,7 +31,7 @@ public class DateSelectedDemoActivity extends AppCompatActivity implements View.
         setContentView(R.layout.bottom_date_selected_demo);
 
         initView();
-        long tenYears =100L * 365 * 1000 * 60 * 60 * 24L;
+        long tenYears = 100L * 365 * 1000 * 60 * 60 * 24L;
 
         mDialogAll = new TimePickerDialog.Builder()
                 .setCancelStringId("取消")
@@ -122,5 +122,4 @@ public class DateSelectedDemoActivity extends AppCompatActivity implements View.
         Date d = new Date(time);
         return sf.format(d);
     }
-
 }
