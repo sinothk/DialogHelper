@@ -1,0 +1,20 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="bottom_lib_dialog_item_text">16sp</dimen>
+    <dimen name="bottom_lib_dialog_title_text">18sp</dimen>
+    <dimen name="bottom_lib_dialog_cancel_text">18sp</dimen>
+
+    <dimen name="bottom_lib_dialog_padding_top">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_bottom">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_left">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_right">12dp</dimen>
+
+    <dimen name="picker_default_text_size">@dimen/sp_12</dimen>
+    <dimen name="picker_toolbar_height">@dimen/dp_40</dimen>
+    <dimen name="picker_dialog_height">@dimen/dp_190</dimen>
+    <dimen name="textview_default_padding">@dimen/dp_5</dimen>
+    <dimen name="picker_line_width">@dimen/dp_1</dimen>
+    <dimen name="picker_line_mar">@dimen/dp_15</dimen>
+    <dimen name="picker_height">@dimen/dp_230</dimen>
+</resources>

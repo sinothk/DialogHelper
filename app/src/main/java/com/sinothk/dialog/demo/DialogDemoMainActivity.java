@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.sinothk.dialog.demo.bottomDialog.BottomDialogDemoMainActivity;
 import com.sinothk.dialog.demo.centerDialog.CenterDialogDemoMainActivity;
 import com.sinothk.dialog.demo.loadingDialog.LoadingDemoMainActivity;
 import com.sinothk.dialog.demo.tipDialog.TipDialogDemoMainActivity;
@@ -32,5 +33,9 @@ public class DialogDemoMainActivity extends AppCompatActivity {
 
     public void topDialog(View view) {
         startActivity(new Intent(this, TopDialogDemoMainActivity.class));
+    }
+
+    public void bottomDialog(View view) {
+        startActivity(new Intent(this, BottomDialogDemoMainActivity.class));
     }
 }

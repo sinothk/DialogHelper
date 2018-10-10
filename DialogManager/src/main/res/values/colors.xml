@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottom_lib_transport">#00000000</color>
+    <color name="bottom_lib_dialog_item_text_color">#333333</color>
+    <color name="bottom_lib_dialog_title_text_color">#666666</color>
+    <color name="bottom_lib_dialog_cancel_text_color">#666666</color>
+
+    <color name="timetimepicker_default_text_color">#999999</color>
+    <color name="timepicker_toolbar_bg">#e60012</color>
+    <color name="timepicker_dialog_bg">#80000000</color>
+    <color name="timepicker_line">#e8e8e8</color>
+</resources>

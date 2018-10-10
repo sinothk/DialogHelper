@@ -22,6 +22,8 @@
         <activity android:name=".tipDialog.TipDialogDemoMainActivity" />
         <activity android:name=".centerDialog.CenterDialogDemoMainActivity" />
         <activity android:name=".topRightMenu.TopDialogDemoMainActivity" />
+        <activity android:name=".bottomDialog.BottomDialogDemoMainActivity" />
+        <activity android:name=".bottomDialog.dateSelected.DateSelectedDemoActivity" />
     </application>
 
 </manifest>

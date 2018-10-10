@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".DialogDemoMainActivity">
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_all"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onLoading"
-        android:text="Loading：DialogHelper.getLoading(context)." />
+        android:text="all" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_year_month_day"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="tipDialog"
-        android:text="提示对话框" />
+        android:text="year_month_day" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_year_month"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="centerDialog"
-        android:text="中部对话框" />
+        android:text="year_month" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_month_day_hour_minute"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="topDialog"
-        android:text="顶部对话框" />
+        android:text="month_day_hour_minute" />
 
     <Button
+        android:id="@+id/btn_hour_minute"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="bottomDialog"
-        android:text="底部弹出" />
+        android:text="hour_minute" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp" />
+
 </LinearLayout>
