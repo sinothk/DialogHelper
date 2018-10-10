@@ -24,6 +24,7 @@
         <activity android:name=".topRightMenu.TopDialogDemoMainActivity" />
         <activity android:name=".bottomDialog.BottomDialogDemoMainActivity" />
         <activity android:name=".bottomDialog.dateSelected.DateSelectedDemoActivity" />
+        <activity android:name=".bottomDialog.shareDialog.BottomShareDialogDemoActivity" />
     </application>
 
 </manifest>

@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.sinothk.dialog.demo.R;
 import com.sinothk.dialog.demo.bottomDialog.dateSelected.DateSelectedDemoActivity;
+import com.sinothk.dialog.demo.bottomDialog.shareDialog.BottomShareDialogDemoActivity;
 
 public class BottomDialogDemoMainActivity extends AppCompatActivity {
 
@@ -22,5 +23,10 @@ public class BottomDialogDemoMainActivity extends AppCompatActivity {
 
     public void dateSelectedDialog(View view) {
         startActivity(new Intent(this, DateSelectedDemoActivity.class));
+    }
+
+
+    public void shareDialog(View view) {
+        startActivity(new Intent(this, BottomShareDialogDemoActivity.class));
     }
 }
