@@ -14,17 +14,25 @@ import android.util.Log;
 public class LoadingDialog {
 
     @SuppressLint("StaticFieldLeak")
+    private static Context context;
+
+    @SuppressLint("StaticFieldLeak")
     private static LoadDialog loadingDialog;
+
+    public LoadingDialog(Context mContext) {
+        context = mContext;
+    }
 
     /**
      * 销毁对话框
      */
-    public static void dismiss() {
+    public void dismiss() {
         try {
             if (loadingDialog != null) {
                 loadingDialog.dismiss();
                 loadingDialog.setTextViewNull();
                 loadingDialog = null;
+                context = null;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -34,22 +42,20 @@ public class LoadingDialog {
 
     /**
      * 无文字提示
-     *
-     * @param context
      */
-    public static void show(Context context) {
+    public void show() {
         try {
             if (loadingDialog != null) {
                 loadingDialog = null;
             }
             loadingDialog = new LoadDialog(context);
             loadingDialog.setCanceledOnTouchOutside(false);
-//            loadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-//                @Override
-//                public void onCancel(DialogInterface dialogInterface) {
-//                    dismiss();
-//                }
-//            });
+            loadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                @Override
+                public void onCancel(DialogInterface dialogInterface) {
+                    dismiss();
+                }
+            });
             loadingDialog.show();
 
 
@@ -62,10 +68,9 @@ public class LoadingDialog {
     /**
      * 有文字提示
      *
-     * @param context
      * @param msg
      */
-    public static void show(Context context, String msg) {
+    public void show(String msg) {
         try {
             if (loadingDialog != null) {
                 loadingDialog = null;
@@ -78,12 +83,12 @@ public class LoadingDialog {
 
             loadingDialog.setCanceledOnTouchOutside(false);
 
-//            loadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-//                @Override
-//                public void onCancel(DialogInterface dialogInterface) {
-//                    dismiss();
-//                }
-//            });
+            loadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                @Override
+                public void onCancel(DialogInterface dialogInterface) {
+                    dismiss();
+                }
+            });
 
             loadingDialog.show();
         } catch (Exception e) {
@@ -91,7 +96,7 @@ public class LoadingDialog {
         }
     }
 
-    public static void showWhitDismiss(Context context) {
+    public void showWhitCancel() {
         try {
             if (loadingDialog != null) {
                 loadingDialog = null;
@@ -111,7 +116,7 @@ public class LoadingDialog {
         }
     }
 
-    public static void showWhitDismiss(Context context, String msg) {
+    public void showWhitCancel(String msg) {
         try {
             if (loadingDialog != null) {
                 loadingDialog = null;

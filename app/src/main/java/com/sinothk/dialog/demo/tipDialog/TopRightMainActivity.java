@@ -40,28 +40,6 @@ public class TopRightMainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.main_loading).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                main_failview.setMode(FailView.MODE_REFRESH);
-//                promptDialog.loading("正在登录");
-//                promptDialog.dismiss();
-
-                LoadingDialog.show(TopRightMainActivity.this,"正在登录");//有文字提示
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                LoadingDialog.dismiss(); //隐藏对话框
-                            }
-                        });
-                    }
-                }, 2000);
-            }
-        });
         findViewById(R.id.main_success).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

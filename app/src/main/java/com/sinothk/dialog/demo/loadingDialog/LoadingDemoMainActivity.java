@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.sinothk.dialog.demo.R;
 import com.sinothk.dialog.loading.LoadingDialog;
+import com.sinothk.helpers.dialog.DialogHelper;
 
 public class LoadingDemoMainActivity extends AppCompatActivity {
 
@@ -17,7 +18,8 @@ public class LoadingDemoMainActivity extends AppCompatActivity {
     }
 
     public void unWordTip(View view) {
-        LoadingDialog.show(LoadingDemoMainActivity.this);//无文字提示
+
+        DialogHelper.getLoading(LoadingDemoMainActivity.this).show();//无文字提示
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -25,7 +27,7 @@ public class LoadingDemoMainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        LoadingDialog.dismiss(); //隐藏对话框
+                        DialogHelper.getLoading(LoadingDemoMainActivity.this).dismiss(); //隐藏对话框
                     }
                 });
             }
@@ -33,7 +35,7 @@ public class LoadingDemoMainActivity extends AppCompatActivity {
     }
 
     public void wordTip(View view) {
-        LoadingDialog.show(LoadingDemoMainActivity.this, "正在登录");//有文字提示
+        DialogHelper.getLoading(LoadingDemoMainActivity.this).show("正在登录");//有文字提示
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -41,7 +43,7 @@ public class LoadingDemoMainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        LoadingDialog.dismiss(); //隐藏对话框
+                        DialogHelper.getLoading(LoadingDemoMainActivity.this).dismiss(); //隐藏对话框
                     }
                 });
             }
@@ -49,7 +51,7 @@ public class LoadingDemoMainActivity extends AppCompatActivity {
     }
 
     public void unWordTipAndCancel(View view) {
-        LoadingDialog.showWhitDismiss(LoadingDemoMainActivity.this);//无文字提示
+        DialogHelper.getLoading(LoadingDemoMainActivity.this).showWhitCancel();//无文字提示
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -57,7 +59,7 @@ public class LoadingDemoMainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        LoadingDialog.dismiss(); //隐藏对话框
+                        DialogHelper.getLoading(LoadingDemoMainActivity.this).dismiss(); //隐藏对话框
                     }
                 });
             }
@@ -65,7 +67,7 @@ public class LoadingDemoMainActivity extends AppCompatActivity {
     }
 
     public void wordTipAndCancel(View view) {
-        LoadingDialog.showWhitDismiss(LoadingDemoMainActivity.this, "正在登录");//有文字提示
+        DialogHelper.getLoading(LoadingDemoMainActivity.this).showWhitCancel("正在登录");//有文字提示
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -73,7 +75,7 @@ public class LoadingDemoMainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        LoadingDialog.dismiss(); //隐藏对话框
+                        DialogHelper.getLoading(LoadingDemoMainActivity.this).dismiss(); //隐藏对话框
                     }
                 });
             }
