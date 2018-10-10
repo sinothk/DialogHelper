@@ -6,9 +6,11 @@
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="130dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:divider="#00F"
+        android:dividerHeight="1dp"
         android:scrollbars="none"
-        android:background="#FFFFFF"
         android:visibility="visible" />
 </FrameLayout>

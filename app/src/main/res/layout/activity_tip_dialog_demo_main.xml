@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/main_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="warningTip"
+            android:text="警告" />
+
+        <Button
+            android:id="@+id/main_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="successTip"
+            android:text="成功" />
+
+        <Button
+            android:id="@+id/main_fail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="errorTip"
+            android:text="失败" />
+
+
+        <Button
+            android:id="@+id/main_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="showInfo"
+            android:text="信息" />
+
+        <Button
+            android:id="@+id/main_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="showCustom"
+            android:text="自定义" />
+
+        <!--<Button-->
+            <!--android:id="@+id/main_warn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="弹窗" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/main_system"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="AlertSheet" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/main_ad"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="显示广告" />-->
+    </LinearLayout>
+</ScrollView>

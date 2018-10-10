@@ -9,6 +9,8 @@ public class PopMenuItem {
     private int itemIcon;
     private String itemName;
 
+    private int itemBg;
+
     public PopMenuItem(String itemId, String itemName) {
         this.itemId = itemId;
         this.itemName = itemName;
@@ -17,6 +19,12 @@ public class PopMenuItem {
     public PopMenuItem(int itemIcon, String itemName) {
         this.itemIcon = itemIcon;
         this.itemName = itemName;
+    }
+
+    public PopMenuItem(int itemIcon, String itemName, int itemBg) {
+        this.itemIcon = itemIcon;
+        this.itemName = itemName;
+        this.itemBg = itemBg;
     }
 
     public String getItemId() {
@@ -41,5 +49,13 @@ public class PopMenuItem {
 
     public void setItemName(String itemName) {
         this.itemName = itemName;
+    }
+
+    public int getItemBg() {
+        return itemBg;
+    }
+
+    public void setItemBg(int itemBg) {
+        this.itemBg = itemBg;
     }
 }

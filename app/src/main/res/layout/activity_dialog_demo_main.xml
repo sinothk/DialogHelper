@@ -12,22 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onLoading"
-        android:text="Loading" />
+        android:text="Loading：DialogHelper.getLoading(context)." />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="tipDialog"
+        android:text="提示对话框" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="centerDialog"
+        android:text="中部对话框" />
 
     <Button
         android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="topDialog"
+        android:text="顶部对话框" />
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button" />

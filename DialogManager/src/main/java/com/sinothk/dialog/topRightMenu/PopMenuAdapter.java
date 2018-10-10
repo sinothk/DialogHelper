@@ -1,11 +1,13 @@
 package com.sinothk.dialog.topRightMenu;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sinothk.dialog.R;
@@ -45,7 +47,7 @@ public class PopMenuAdapter extends BaseAdapter {
         HoldView holdView;
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.pop_menu_list_item, parent, false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.top_diaolog_menu_list_item, parent, false);
             holdView = new HoldView(convertView);
             convertView.setTag(holdView);
         } else {
@@ -56,14 +58,23 @@ public class PopMenuAdapter extends BaseAdapter {
         holdView.itemIcon.setImageResource(popMenuItem.getItemIcon());
         holdView.itemName.setText(popMenuItem.getItemName());
 
+        if (popMenuItem.getItemBg() > 0) {
+            holdView.listItemLayout.setBackgroundResource(popMenuItem.getItemBg());
+        } else {
+            holdView.listItemLayout.setBackgroundResource(R.drawable.selector_list_item_bg);
+        }
+
+
         return convertView;
     }
 
     private class HoldView {
+        LinearLayout listItemLayout;
         TextView itemName;
         ImageView itemIcon;
 
         HoldView(View convertView) {
+            listItemLayout = (LinearLayout) convertView.findViewById(R.id.listItemLayout);
             itemIcon = (ImageView) convertView.findViewById(R.id.itemIcon);
             itemName = (TextView) convertView.findViewById(R.id.itemName);
         }
