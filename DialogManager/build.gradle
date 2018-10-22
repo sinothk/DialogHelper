@@ -28,7 +28,6 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$APPCOMPAT_VERSION"
     testImplementation 'junit:junit:4.12'
     implementation 'com.github.sinothk:CommUnit:2.3.0926'
-
     // temp
     api 'com.jiangyy:dialog:1.0.4'
     //    implementation 'com.jiangyy:dialog:1.0.4'
