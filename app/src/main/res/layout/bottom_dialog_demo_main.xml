@@ -27,5 +27,11 @@
             android:layout_height="wrap_content"
             android:onClick="shareDialog"
             android:text="分享/底部输入" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="bottomDialog"
+            android:text="底部选择" />
     </LinearLayout>
 </ScrollView>

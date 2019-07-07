@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.jiangyy.easydialog.SingleChoiceDialog;
 import com.sinothk.dialog.bottomDialog.normalDialog.BottomSelectorDialog;
 import com.sinothk.dialog.demo.R;
 import com.sinothk.dialog.demo.bottomDialog.dateSelected.DateSelectedDemoActivity;
@@ -55,5 +56,16 @@ public class BottomDialogDemoMainActivity extends AppCompatActivity {
 
     public void shareDialog(View view) {
         startActivity(new Intent(this, BottomShareDialogDemoActivity.class));
+    }
+
+    public void bottomDialog(View view) {
+        new SingleChoiceDialog.Builder(this).setTitle("选择政治面貌")
+                .addList(new String[]{"群众", "党员"})
+                .setOnItemClickListener(new SingleChoiceDialog.OnItemClickListener() {
+                    @Override
+                    public void OnItemClick(String title, int position) {
+                        Toast.makeText(BottomDialogDemoMainActivity.this, "title = " + title + ", " + position, Toast.LENGTH_SHORT).show();
+                    }
+                }).show();
     }
 }
