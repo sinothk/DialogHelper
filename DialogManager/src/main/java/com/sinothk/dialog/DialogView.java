@@ -17,11 +17,11 @@ import com.sinothk.dialog.topRightMenu.PopupOverFlow;
  */
 public class DialogView {
 
-    private static Context context;
-
-    public static void init(Context mContext) {
-        context = mContext;
-    }
+//    private static Context context;
+//
+//    public static void init(Context mContext) {
+//        context = mContext;
+//    }
 
     private static void contextNullError() {
         throw new NullPointerException("mContext == null或参数为null, 请在调用前初始化：init(context), 请在调用前初始化：init(context)");
@@ -31,7 +31,7 @@ public class DialogView {
     @SuppressLint("StaticFieldLeak")
     private static LoadingDialog loadingDialog;
 
-    public static LoadingDialog loading() {
+    public static LoadingDialog loading(Context context) {
         if (loadingDialog == null) {
             synchronized (DialogView.class) {
                 if (context == null) contextNullError();
