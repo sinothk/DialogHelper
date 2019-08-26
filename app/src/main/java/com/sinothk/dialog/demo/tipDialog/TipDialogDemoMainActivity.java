@@ -6,7 +6,7 @@ import android.view.View;
 
 import com.sinothk.dialog.demo.R;
 import com.sinothk.dialog.tipDialog.PromptDialog;
-import com.sinothk.helpers.dialog.DialogHelper;
+import com.sinothk.dialog.DialogView;
 
 /**
  * github:limxing
@@ -124,22 +124,22 @@ public class TipDialogDemoMainActivity extends AppCompatActivity {
 //    }
 
     public void warningTip(View view) {
-        DialogHelper.getTipDialog(this).showWarn("注意");
+        DialogView.getTipDialog(this).showWarn("注意");
     }
 
     public void successTip(View view) {
-        DialogHelper.getTipDialog(this).showSuccess("登陆成功");
+        DialogView.getTipDialog(this).showSuccess("登陆成功");
     }
 
     public void errorTip(View view) {
-        DialogHelper.getTipDialog(this).showError("登录失败");
+        DialogView.getTipDialog(this).showError("登录失败");
     }
 
     public void showInfo(View view) {
-        DialogHelper.getTipDialog(this).showInfo("成功了");
+        DialogView.getTipDialog(this).showInfo("成功了");
     }
 
     public void showCustom(View view) {
-        DialogHelper.getTipDialog(this).showCustom(R.mipmap.ic_launcher, "自定义图标的");
+        DialogView.getTipDialog(this).showCustom(R.mipmap.ic_launcher, "自定义图标的");
     }
 }

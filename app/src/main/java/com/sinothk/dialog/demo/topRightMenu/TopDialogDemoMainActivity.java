@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import com.sinothk.dialog.demo.R;
 import com.sinothk.dialog.topRightMenu.PopMenuItem;
-import com.sinothk.helpers.dialog.DialogHelper;
+import com.sinothk.dialog.DialogView;
 
 import java.util.ArrayList;
 
@@ -29,7 +29,7 @@ public class TopDialogDemoMainActivity extends AppCompatActivity {
         menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "PopMenu4"));
         menuItems.add(new PopMenuItem(R.mipmap.ic_launcher, "PopMenu5"));
 
-        DialogHelper.getTopDialog(this).show(view, menuItems, new AdapterView.OnItemClickListener() {
+        DialogView.getTopDialog(this).show(view, menuItems, new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(TopDialogDemoMainActivity.this, "position = " + position, Toast.LENGTH_SHORT).show();
