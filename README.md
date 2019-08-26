@@ -7,14 +7,31 @@
     }
     
 # step 2
-        DialogHelper.getLoading(LoadingDemoMainActivity.this).show("正在登录");//有文字提示
+       DialogView.init(this);
+        
+       DialogView.loading().show(false);//无文字提示
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        DialogHelper.getLoading(LoadingDemoMainActivity.this).dismiss(); //隐藏对话框
+                        DialogView.loading().dismiss(); //隐藏对话框
+                    }
+                });
+            }
+        }, 5000);
+
+     DialogView.loading().show(false, "正在登录");//有文字提示
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        DialogView.loading().dismiss(); //隐藏对话框
                     }
                 });
             }
