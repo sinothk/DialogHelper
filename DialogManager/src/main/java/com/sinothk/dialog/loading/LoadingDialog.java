@@ -11,12 +11,9 @@ import android.text.TextUtils;
  */
 public class LoadingDialog {
 
-    private Context context;
-
     private LoadDialog loadingDialog;
 
-    public LoadingDialog(Context mContext) {
-        context = mContext;
+    public LoadingDialog() {
     }
 
     /**
@@ -35,68 +32,13 @@ public class LoadingDialog {
 
     }
 
-//    /**
-//     * 无文字提示
-//     */
-//    public void show() {
-//        try {
-//            if (loadingDialog != null) {
-//                loadingDialog = null;
-//            }
-//            loadingDialog = new LoadDialog(context);
-//            loadingDialog.setCanceledOnTouchOutside(false);
-//            loadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-//                @Override
-//                public void onCancel(DialogInterface dialogInterface) {
-//                    dismiss();
-//                }
-//            });
-//            loadingDialog.show();
-//
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
-//
-//    /**
-//     * 有文字提示
-//     *
-//     * @param msg
-//     */
-//    public void show(String msg) {
-//        try {
-//            if (loadingDialog != null) {
-//                loadingDialog = null;
-//            }
-//            loadingDialog = new LoadDialog(context);
-//            // 设置文字属性
-//            if (!TextUtils.isEmpty(msg)) {
-//                loadingDialog.setText(msg);
-//            }
-//
-//            loadingDialog.setCanceledOnTouchOutside(false);
-//
-//            loadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-//                @Override
-//                public void onCancel(DialogInterface dialogInterface) {
-//                    dismiss();
-//                }
-//            });
-//
-//            loadingDialog.show();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-    public void show(boolean canCancel) {
+    public void show(Context mContext, boolean canCancel) {
         try {
             if (loadingDialog != null) {
+                loadingDialog.dismiss();
                 loadingDialog = null;
             }
-            loadingDialog = new LoadDialog(context);
+            loadingDialog = new LoadDialog(mContext);
             loadingDialog.setCanceledOnTouchOutside(canCancel);
             loadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
                 @Override
@@ -111,12 +53,13 @@ public class LoadingDialog {
         }
     }
 
-    public void show(boolean canCancel, String msg) {
+    public void show(Context mContext, boolean canCancel, String msg) {
         try {
             if (loadingDialog != null) {
+                loadingDialog.dismiss();
                 loadingDialog = null;
             }
-            loadingDialog = new LoadDialog(context);
+            loadingDialog = new LoadDialog(mContext);
             // 设置文字属性
             if (!TextUtils.isEmpty(msg)) {
                 loadingDialog.setText(msg);
