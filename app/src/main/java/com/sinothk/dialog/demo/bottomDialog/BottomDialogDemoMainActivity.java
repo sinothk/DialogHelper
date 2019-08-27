@@ -61,9 +61,10 @@ public class BottomDialogDemoMainActivity extends AppCompatActivity {
     public void bottomDialog(View view) {
         new SingleChoiceDialog.Builder(this).setTitle("选择政治面貌")
                 .addList(new String[]{"群众", "党员"})
+
                 .setOnItemClickListener(new SingleChoiceDialog.OnItemClickListener() {
                     @Override
-                    public void OnItemClick(String title, int position) {
+                    public void onItemClick(String title, int position) {
                         Toast.makeText(BottomDialogDemoMainActivity.this, "title = " + title + ", " + position, Toast.LENGTH_SHORT).show();
                     }
                 }).show();
