@@ -3,7 +3,7 @@
 
 # step 1
     dependencies {
-        implementation 'com.github.sinothk:DialogHelper:3.0.0707'
+        implementation 'com.github.sinothk:DialogHelper:3.19.00829'
     }
     
 # step 2
