@@ -20,7 +20,7 @@ class DialogMainDemoActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v) {
             loadingDialog -> {
-                QDialogView.loading().show(this, false)
+                QDialogView.loading(this).show(false)
             }
 
             okOrCancelDialog -> {

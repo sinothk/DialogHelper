@@ -31,10 +31,10 @@ public class DialogView {
     @SuppressLint("StaticFieldLeak")
     private static LoadingDialog loadingDialog;
 
-    public static LoadingDialog loading() {
+    public static LoadingDialog loading(Activity mActivity) {
         if (loadingDialog == null) {
             synchronized (DialogView.class) {
-                loadingDialog = new LoadingDialog();
+                loadingDialog = new LoadingDialog(mActivity);
             }
         }
         return loadingDialog;

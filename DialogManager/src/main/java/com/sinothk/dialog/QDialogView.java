@@ -20,10 +20,10 @@ public class QDialogView {
     @SuppressLint("StaticFieldLeak")
     private static LoadingDialog loadingDialog;
 
-    public static LoadingDialog loading() {
+    public static LoadingDialog loading(Activity mActivity) {
         if (loadingDialog == null) {
             synchronized (QDialogView.class) {
-                loadingDialog = new LoadingDialog();
+                loadingDialog = new LoadingDialog(mActivity);
             }
         }
         return loadingDialog;

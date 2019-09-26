@@ -1,5 +1,6 @@
 package com.sinothk.dialog.loading;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.text.TextUtils;
@@ -13,7 +14,10 @@ public class LoadingDialog {
 
     private LoadDialog loadingDialog;
 
-    public LoadingDialog() {
+    private Activity mActivity;
+
+    public LoadingDialog(Activity mActivity) {
+        this.mActivity = mActivity;
     }
 
     /**
@@ -32,13 +36,13 @@ public class LoadingDialog {
 
     }
 
-    public void show(Context mContext, boolean canCancel) {
+    public void show(boolean canCancel) {
         try {
             if (loadingDialog != null) {
                 loadingDialog.dismiss();
                 loadingDialog = null;
             }
-            loadingDialog = new LoadDialog(mContext);
+            loadingDialog = new LoadDialog(mActivity);
             loadingDialog.setCanceledOnTouchOutside(canCancel);
             loadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
                 @Override
@@ -53,13 +57,13 @@ public class LoadingDialog {
         }
     }
 
-    public void show(Context mContext, boolean canCancel, String msg) {
+    public void show(boolean canCancel, String msg) {
         try {
             if (loadingDialog != null) {
                 loadingDialog.dismiss();
                 loadingDialog = null;
             }
-            loadingDialog = new LoadDialog(mContext);
+            loadingDialog = new LoadDialog(mActivity);
             // 设置文字属性
             if (!TextUtils.isEmpty(msg)) {
                 loadingDialog.setText(msg);
