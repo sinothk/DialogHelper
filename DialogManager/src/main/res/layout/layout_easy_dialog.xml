@@ -27,15 +27,16 @@
         android:id="@+id/dialog_message"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:minLines="2"
-        android:paddingTop="@dimen/dp_8"
-        android:paddingBottom="@dimen/dp_8"
+        android:gravity="start"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
         android:textSize="@dimen/sp_15"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dialog_title"
-        tools:text="message" />
+        tools:text="内容内容内容内容内容内容内容内容内容内容内容内容" />
 
     <View
         android:id="@+id/dialog_line1"
@@ -65,14 +66,12 @@
         android:focusable="true"
         android:gravity="center"
         android:minHeight="@dimen/dp_42"
-        android:paddingTop="@dimen/dp_8"
-        android:paddingBottom="@dimen/dp_8"
         android:text="取消"
         android:textSize="@dimen/sp_13"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/dialog_line2"
+        app:layout_constraintEnd_toStartOf="@id/dialog_line2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_line1" />
+        app:layout_constraintTop_toBottomOf="@id/dialog_line1" />
 
     <TextView
         android:id="@+id/dialog_positive"
@@ -83,15 +82,12 @@
         android:focusable="true"
         android:gravity="center"
         android:minHeight="@dimen/dp_42"
-        android:paddingTop="@dimen/dp_8"
-        android:paddingBottom="@dimen/dp_8"
         android:text="确定"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/sp_13"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dialog_line2"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_line1" />
+        app:layout_constraintStart_toEndOf="@id/dialog_line2"
+        app:layout_constraintTop_toBottomOf="@id/dialog_line1" />
 
 </android.support.constraint.ConstraintLayout>
