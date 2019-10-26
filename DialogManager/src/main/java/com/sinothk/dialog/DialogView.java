@@ -15,7 +15,6 @@ import com.sinothk.dialog.topRightMenu.PopupOverFlow;
  * @ create 2018/10/10 9:07
  * @ Describe
  */
-@Deprecated
 public class DialogView {
 
 //    private static Context context;
@@ -29,16 +28,8 @@ public class DialogView {
     }
 
     // Dialog
-    @SuppressLint("StaticFieldLeak")
-    private static LoadingDialog loadingDialog;
-
     public static LoadingDialog loading(Activity mActivity) {
-        if (loadingDialog == null) {
-            synchronized (DialogView.class) {
-                loadingDialog = new LoadingDialog(mActivity);
-            }
-        }
-        return loadingDialog;
+        return new LoadingDialog(mActivity);
     }
 
     public static TipDialog getTipDialog(Activity activity) {
