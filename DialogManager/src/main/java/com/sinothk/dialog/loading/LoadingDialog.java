@@ -38,10 +38,6 @@ public class LoadingDialog {
 
     public void show(boolean canCancel) {
         try {
-            if (loadingDialog != null) {
-                loadingDialog.dismiss();
-                loadingDialog = null;
-            }
             loadingDialog = new LoadDialog(mActivity);
             loadingDialog.setCanceledOnTouchOutside(canCancel);
             loadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {

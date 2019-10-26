@@ -28,8 +28,15 @@ public class DialogView {
     }
 
     // Dialog
+    @SuppressLint("StaticFieldLeak")
+    private static LoadingDialog loadingDialog;
     public static LoadingDialog loading(Activity mActivity) {
-        return new LoadingDialog(mActivity);
+        if (loadingDialog == null) {
+            synchronized (LoadingDialog.class) {
+                loadingDialog = new LoadingDialog(mActivity);
+            }
+        }
+        return loadingDialog;
     }
 
     public static TipDialog getTipDialog(Activity activity) {
