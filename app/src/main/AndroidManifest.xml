@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".DialogMainDemoActivity">
+        <activity android:name=".DialogDemoMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DialogDemoMainActivity"/>
+<!--        <activity android:name=".DialogDemoMainActivity"/>-->
 
         <activity android:name=".loadingDialog.LoadingDemoMainActivity" />
         <activity android:name=".tipDialog.TipDialogDemoMainActivity" />
