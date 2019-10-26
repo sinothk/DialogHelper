@@ -2,7 +2,6 @@ package com.jiangyy.easydialog;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.support.annotation.DrawableRes;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -14,6 +13,8 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.DrawableRes;
 
 import com.jiangyy.easydialog.utils.DialogUtils;
 import com.sinothk.dialog.R;

@@ -1,6 +1,6 @@
 package com.jiangyy.easydialog.utils;
 
-import android.support.annotation.StyleRes;
+import androidx.annotation.StyleRes;
 
 import com.sinothk.dialog.R;
 

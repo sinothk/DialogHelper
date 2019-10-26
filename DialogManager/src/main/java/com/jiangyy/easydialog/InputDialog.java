@@ -3,8 +3,6 @@ package com.jiangyy.easydialog;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.content.ContextCompat;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +10,9 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 
 import com.jiangyy.easydialog.utils.DialogUtils;
 import com.sinothk.dialog.R;

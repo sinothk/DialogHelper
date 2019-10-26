@@ -2,8 +2,9 @@ package com.sinothk.dialog.demo.loadingDialog;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.sinothk.dialog.DialogView;
 import com.sinothk.dialog.demo.R;

@@ -1,10 +1,11 @@
 package com.sinothk.dialog.demo.topRightMenu;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.sinothk.dialog.demo.R;
 import com.sinothk.dialog.topRightMenu.PopMenuItem;

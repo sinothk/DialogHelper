@@ -1,8 +1,9 @@
 package com.sinothk.dialog.demo.tipDialog;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.sinothk.dialog.demo.R;
 import com.sinothk.dialog.tipDialog.PromptDialog;
