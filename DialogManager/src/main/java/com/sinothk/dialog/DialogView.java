@@ -15,6 +15,7 @@ import com.sinothk.dialog.topRightMenu.PopupOverFlow;
  * @ create 2018/10/10 9:07
  * @ Describe
  */
+@Deprecated
 public class DialogView {
 
 //    private static Context context;
