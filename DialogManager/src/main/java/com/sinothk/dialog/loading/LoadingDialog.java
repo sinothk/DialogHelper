@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.text.TextUtils;
 
+import com.sinothk.dialog.DialogView;
+
 
 /**
  * Created by ming on 2016/8/18.
@@ -29,6 +31,7 @@ public class LoadingDialog {
                 loadingDialog.dismiss();
                 loadingDialog.setTextViewNull();
                 loadingDialog = null;
+                DialogView.loadingDialogHelper = null;
             }
         } catch (Exception e) {
             e.printStackTrace();
