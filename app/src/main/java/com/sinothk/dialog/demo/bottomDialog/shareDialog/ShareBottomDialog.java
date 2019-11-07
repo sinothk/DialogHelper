@@ -14,16 +14,13 @@ import com.sinothk.dialog.demo.R;
  */
 
 public class ShareBottomDialog extends BaseBottomDialog {
-
     @Override
-    public int getLayoutRes() {
+    public int getDialogLayoutRes() {
         return R.layout.dialog_layout;
     }
 
     @Override
-    public void bindView(View v) {
-        // do any thing you want
-
+    public void bindDialogView(View v) {
         RelativeLayout mRlWechat = v.findViewById(R.id.mRlWechat);
         mRlWechat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,8 +31,4 @@ public class ShareBottomDialog extends BaseBottomDialog {
         });
     }
 
-    @Override
-    public BaseBottomDialog show(FragmentManager fragmentManager) {
-        return this;
-    }
 }

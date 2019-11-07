@@ -60,14 +60,14 @@ public class BottomDialog extends BaseBottomDialog {
     }
 
     @Override
-    public void bindView(View v) {
+    public void bindDialogView(View v) {
         if (mViewListener != null) {
             mViewListener.bindView(v);
         }
     }
 
     @Override
-    public int getLayoutRes() {
+    public int getDialogLayoutRes() {
         return mLayoutRes;
     }
 

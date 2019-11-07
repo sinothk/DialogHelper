@@ -19,12 +19,12 @@ public class EditTextDialog extends BaseBottomDialog {
     private EditText mEditText;
 
     @Override
-    public int getLayoutRes() {
+    public int getDialogLayoutRes() {
         return R.layout.dialog_edit_text;
     }
 
     @Override
-    public void bindView(View v) {
+    public void bindDialogView(View v) {
         mEditText = (EditText) v.findViewById(R.id.edit_text);
         mEditText.post(new Runnable() {
             @Override
