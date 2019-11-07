@@ -4,6 +4,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import androidx.fragment.app.FragmentManager;
+
 import com.sinothk.dialog.bottomDialog.shareDialog.BaseBottomDialog;
 import com.sinothk.dialog.demo.R;
 
@@ -30,5 +32,10 @@ public class ShareBottomDialog extends BaseBottomDialog {
                 dismiss();
             }
         });
+    }
+
+    @Override
+    public BaseBottomDialog show(FragmentManager fragmentManager) {
+        return this;
     }
 }

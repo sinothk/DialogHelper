@@ -85,7 +85,8 @@ public abstract class BaseBottomDialog extends DialogFragment {
         return TAG;
     }
 
-    public void show(FragmentManager fragmentManager) {
+    public BaseBottomDialog show(FragmentManager fragmentManager) {
         show(fragmentManager, getFragmentTag());
+        return this;
     }
 }
