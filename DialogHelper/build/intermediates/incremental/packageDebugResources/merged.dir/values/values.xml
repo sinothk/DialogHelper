@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottom_lib_dialog_cancel_text_color">#666666</color>
+    <color name="bottom_lib_dialog_item_text_color">#333333</color>
+    <color name="bottom_lib_dialog_title_text_color">#666666</color>
+    <color name="bottom_lib_transport">#00000000</color>
+    <color name="timepicker_dialog_bg">#80000000</color>
+    <color name="timepicker_line">#e8e8e8</color>
+    <color name="timepicker_toolbar_bg">#e60012</color>
+    <color name="timetimepicker_default_text_color">#999999</color>
+    <dimen name="bottom_lib_dialog_cancel_text">18sp</dimen>
+    <dimen name="bottom_lib_dialog_item_text">16sp</dimen>
+    <dimen name="bottom_lib_dialog_padding_bottom">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_left">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_right">12dp</dimen>
+    <dimen name="bottom_lib_dialog_padding_top">12dp</dimen>
+    <dimen name="bottom_lib_dialog_title_text">18sp</dimen>
+    <dimen name="picker_default_text_size">@dimen/sp_12</dimen>
+    <dimen name="picker_dialog_height">@dimen/dp_190</dimen>
+    <dimen name="picker_height">@dimen/dp_230</dimen>
+    <dimen name="picker_line_mar">@dimen/dp_15</dimen>
+    <dimen name="picker_line_width">@dimen/dp_1</dimen>
+    <dimen name="picker_toolbar_height">@dimen/dp_40</dimen>
+    <dimen name="textview_default_padding">@dimen/dp_5</dimen>
+    <string name="bottom_dialog_lib_cancel">取消</string>
+    <string name="cancel">@string/bottom_dialog_lib_cancel</string>
+    <string name="picker_cancel">取消</string>
+    <string name="picker_day">日</string>
+    <string name="picker_hour">时</string>
+    <string name="picker_minute">分</string>
+    <string name="picker_month">月</string>
+    <string name="picker_sure">确定</string>
+    <string name="picker_title">选择时间</string>
+    <string name="picker_year">年</string>
+    <style name="AnimTools" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_in</item>
+        <item name="android:windowExitAnimation">@anim/push_out</item>
+    </style>
+    <style mce_bogus="1" name="AnimationPicker" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+    <style name="BottomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialog.AnimationStyle</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="BottomDialog.AnimationStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+    <style name="Dialog.NoTitle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationPicker</item>
+    </style>
+    <style name="LoadDialogStyle" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="SelectorDialogsStyleiOS7">
+        <item name="selectorDialogBackground">@android:color/transparent</item>
+        <item name="cancelButtonBackground">@drawable/slt_as_ios7_cancel_bt</item>
+        <item name="otherButtonTopBackground">@drawable/slt_as_ios7_other_bt_top</item>
+        <item name="otherButtonMiddleBackground">@drawable/slt_as_ios7_other_bt_middle</item>
+        <item name="otherButtonBottomBackground">@drawable/slt_as_ios7_other_bt_bottom</item>
+        <item name="otherButtonSingleBackground">@drawable/slt_as_ios7_other_bt_single</item>
+
+        <item name="cancelButtonTextColor">@color/colorPrimary</item>
+        <item name="otherButtonTextColor">#666666</item>
+        <item name="selectorDialogPadding">18dp</item>
+        <item name="otherButtonSpacing">0dp</item>
+        <item name="cancelButtonMarginTop">10dp</item>
+        <item name="selectorDialogTextSize">17sp</item>
+    </style>
+    <declare-styleable name="SelectorDialog">
+        <attr format="color|reference" name="selectorDialogBackground"/>
+        <attr format="color|reference" name="cancelButtonBackground"/>
+        <attr format="color|reference" name="otherButtonTopBackground"/>
+        <attr format="color|reference" name="otherButtonMiddleBackground"/>
+        <attr format="color|reference" name="otherButtonBottomBackground"/>
+        <attr format="color|reference" name="otherButtonSingleBackground"/>
+        <attr format="color|reference" name="cancelButtonTextColor"/>
+        <attr format="color|reference" name="otherButtonTextColor"/>
+        <attr format="dimension|reference" name="selectorDialogPadding"/>
+        <attr format="dimension|reference" name="otherButtonSpacing"/>
+        <attr format="dimension|reference" name="cancelButtonMarginTop"/>
+        <attr format="dimension|reference" name="selectorDialogTextSize"/>
+    </declare-styleable>
+    <declare-styleable name="SelectorDialogs">
+        <attr format="reference" name="selectorDialogStyle"/>
+    </declare-styleable>
+</resources>

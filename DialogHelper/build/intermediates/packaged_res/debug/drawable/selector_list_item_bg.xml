@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <!-- 渐变 -->
+            <!--<gradient-->
+            <!--android:startColor="#ff8c00"-->
+            <!--android:endColor="#FFFFFF"-->
+            <!--android:type="radial"-->
+            <!--android:gradientRadius="50" />-->
+
+            <solid android:color="#F8F8F8" />
+
+            <!-- 描边 -->
+            <stroke android:width="0dp" android:color="#F8F8F8" android:dashGap="0dp" android:dashWidth="0dp" />
+            <!-- 圆角 -->
+            <corners android:radius="0dp" />
+
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape>
+    </item>
+
+    <item android:state_focused="true">
+        <shape>
+            <!--<gradient-->
+            <!--android:startColor="#ffc2b7"-->
+            <!--android:endColor="#ffc2b7"-->
+            <!--android:angle="270" />-->
+            <solid android:color="#F8F8F8" />
+
+            <stroke android:width="0dp" android:color="#F8F8F8" />
+            <corners android:radius="2dp" />
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+
+            <solid android:color="#FFFFFF" />
+
+            <stroke android:width="2dp" android:color="#FFFFFF" />
+
+            <corners android:bottomLeftRadius="0dp" android:bottomRightRadius="0dp" android:topLeftRadius="0dp" android:topRightRadius="0dp" />
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape>
+    </item>
+</selector>

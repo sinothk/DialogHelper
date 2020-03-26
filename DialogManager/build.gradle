@@ -24,13 +24,13 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //
-    implementation 'com.github.sinothk:AndroidRes:2.x.1012'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta3'
+    implementation 'com.gitee.sinothk:AndroidRes:3.x.0326'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta4'
 
     // temp
 //    api 'com.jiangyy:dialog:1.0.4'
